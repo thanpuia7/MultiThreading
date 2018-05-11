@@ -1,0 +1,16 @@
+
+import static java.lang.Thread.yield;
+
+class A extends Thread
+{
+    public void run()
+    {for(int i=1;i<=5;i++)
+    {
+        if(i==1) yield();
+        System.out.println("\tFrom Thread A: i= "+i);
+                    
+    }
+    System.out.println("Exit from A");
+    
+        }
+}
